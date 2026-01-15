@@ -22,7 +22,7 @@ type PieSlice = { name: string; value: number };
 export function DashboardPage() {
   const { isAuthenticated, loading: authLoading } = useAuth();
 
-  // ✅ dati REALI (da backend)
+  // dati REALI (da backend)
   const [totalVms, setTotalVms] = useState(0);
   const [totalResources, setTotalResources] = useState(0);
   const [monthlyCost, setMonthlyCost] = useState(0);
