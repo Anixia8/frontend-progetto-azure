@@ -180,7 +180,7 @@ const loadDashboardData = async () => {
   const [newSqlAdminLogin, setNewSqlAdminLogin] = useState("");
   const [newSqlAdminPassword, setNewSqlAdminPassword] = useState("");
   const [newSqlSkuName, setNewSqlSkuName] = useState("Basic");
-  const [newSqlAllowAzureServices, setNewSqlAllowAzureServices] = useState(true);
+  //const [newSqlAllowAzureServices, setNewSqlAllowAzureServices] = useState(true);
 
   const [creating, setCreating] = useState(false);
   const [createError, setCreateError] = useState<string | null>(null);
@@ -304,7 +304,7 @@ const loadDashboardData = async () => {
             admin_login: newSqlAdminLogin,
             admin_password: newSqlAdminPassword,
             sku_name: newSqlSkuName,
-            allow_azure_services: newSqlAllowAzureServices,
+            //allow_azure_services: newSqlAllowAzureServices,
           },
         });
 
@@ -717,15 +717,7 @@ const loadDashboardData = async () => {
                         <span className="help">Esempi: Basic, S0, S1...</span>
                       </div>
 
-                      <div className="field" style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                        <input
-                          type="checkbox"
-                          checked={newSqlAllowAzureServices}
-                          onChange={(e) => setNewSqlAllowAzureServices(e.target.checked)}
-                          disabled={creating}
-                        />
-                        <span>Permetti connessioni da “Azure services” (firewall 0.0.0.0)</span>
-                      </div>
+                      
 
                       <div />
                     </>
